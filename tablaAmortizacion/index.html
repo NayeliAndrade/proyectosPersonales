@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <form>
+        <h1>Ingresa los valores:</h1>
+        <input type="text" name="" id="prestamo" placeholder="Cantidad del prestamo">
+        <input type="text" name="" id="interes" placeholder="Interes">
+        <input type="text" name="" id="meses" placeholder="Meses">      
+        <button type="submit">Enviar</button>  
+    </form>
+    <div>
+       <table>
+        <thead>
+            <tr>
+                <td>Meses</td>
+                <td>Pago</td>
+                <td>Interes</td>
+                <td>Amortizacion</td>
+                <td>Saldo</td>
+            </tr>
+        </thead>
+        <tbody class="contenedorTablaAmortizacion">
+        </tbody>
+       </table>
+    </div>
+   
+ <template>
+   
+        <tr>
+            <td class="tablaMeses"></td>
+            <td class="tablaPago"></td>
+            <td class="tablaInteres"></td>
+            <td class="tablaAmortizacion"></td>
+            <td class="tablaSaldo"></td>
+        </tr>
+    
+ </template>
+<script src="js/main.js" type="module"></script>
+</body>
+</html>

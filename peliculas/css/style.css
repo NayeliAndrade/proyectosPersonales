@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 1400px;
+}
+
+.containerBTNS {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.Btnprevious-next {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerFilter {
+    margin-top: 1rem;
+    background-color: rgb(230, 235, 240);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+}
+
+#search {
+    margin-top: 1rem;
+    height: 2rem;
+}
+
+button {
+    color: white;
+    border: none;
+    margin: 1rem;
+    width: 100px;
+    padding: 0.5rem;
+}
+
+.previous {
+    background-color: rgb(5, 5, 123);
+}
+
+.next {
+    background-color: rgb(181, 59, 14);
+}
+
+#filterName {
+    background-color: rgb(14, 181, 64);
+}
+
+#filterYear {
+    background-color: rgb(73, 25, 234);
+}
+
+/* .movieContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem;
+    justify-content: center;
+} */
+.all {
+    width: 200px;
+    margin: 1rem;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* main3 */
+
+#movieContainer {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.cards {
+    width: 300px;
+    text-align: center;
+}

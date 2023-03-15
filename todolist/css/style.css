@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background-image: url(../img/laptop-g113b214d4_1920.jpg);
+    background-attachment: fixed;
+}
+
+main {
+    margin: 0 auto;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 3px 1px #898989e3;
+    text-align: center;
+    font-size: 45px;
+}
+
+#taskInput {
+    padding: 5px;
+}
+
+#submit {
+    background-color: rgb(22, 22, 174);
+    color: white;
+    padding: 6px;
+    border: none;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.containerTasks {
+    background-color: rgb(0 0 0 / 51%);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+.taskContainer {
+    margin: 9px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+#statustask {
+    padding: 5px;
+    background-color: #eeeeef80;
+}
+
+#task {
+    border: none;
+    padding: 7px;
+}
+
+i {
+    color: white;
+}
+
+#complete {
+    background: green;
+}
+
+#pending {
+    background: red;
+}
+
+#doing {
+    background: yellow;
+}
+
+.deleteAll {
+    background-color: rgb(22, 22, 174);
+    color: white;
+    margin-top: 1rem;
+    display: none;
+}
+
+.btnTaskVoid {
+    color: white;
+    display: inline-block;
+    margin: 1.5rem;
+    font-size: 25px;
+    background-color: rgb(0 0 0 / 51%);
+    padding: .5rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}

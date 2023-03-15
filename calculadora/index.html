@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="control">
+        <div class="left">
+            <div class="circle-cross">
+                <div class="vertical">
+                    <button class="multiplication" onclick="solve('*')">*</button>
+                    <button class="division" onclick="solve('/')">/</button>
+                </div>
+                <div class="horizontal">
+                    <button class="sum" onclick="solve('+')">+</button>
+                    <button class="subtract" onclick="solve('-')">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="screen">
+            <div class="input"></div>
+            <div class="btn">
+                <button onclick="cleanWindow()">C</button>
+                <button onclick="cleanOne()">DEL</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="nmrs">
+                <button class="numbers" onclick="numbers(1)">1</button>
+                <button class="numbers" onclick="numbers(2)">2</button>
+                <button class="numbers" onclick="numbers(3)">3</button>
+                <button class="numbers" onclick="numbers(4)">4</button>
+                <button class="numbers" onclick="numbers(5)">5</button>
+                <button class="numbers" onclick="numbers(6)">6</button>
+                <button class="numbers" onclick="numbers(7)">7</button>
+                <button class="numbers" onclick="numbers(8)">8</button>
+                <button class="numbers" onclick="numbers(9)">9</button>
+                <button class="numbers" onclick="numbers(0)">0</button>
+                <button class="numbers" onclick="point()">.</button>
+                <button class="numbers" onclick="equal()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
