@@ -5,11 +5,23 @@
     background-color: black;
 }
 .container{
-   width: 1500px;
-   height: 630px;
+   width: 700px;
+   height: 350px;
     border: 2px solid rgb(193, 32, 32);
 }
 
 .pikachu{
     width: 100px;
+}
+
+button{
+    color: white;
+    width: 20px;
+}
+
+.containerButtons{
+    position: relative;
+    top: 12rem;
+    left: 9rem;
+    width: 200px;
 }

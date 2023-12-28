@@ -31,12 +31,12 @@ function printInfo(moviesData) {
   }
 }
 
-function setListeners(){
+function setListeners() {
   let btnPreviousClick = document.querySelector(".previous");
-  btnPreviousClick.addEventListener("click",previousPage);
+  btnPreviousClick.addEventListener("click", previousPage);
 
-  let btnNextClick= document.querySelector(".next");
-  btnNextClick.addEventListener("click",nextPage)
+  let btnNextClick = document.querySelector(".next");
+  btnNextClick.addEventListener("click", nextPage)
 }
 
 function previousPage() {
@@ -53,48 +53,28 @@ function nextPage() {
   }
 }
 
-function search() {
-  let btnFilterTitle = document.querySelector("#filterName");
-  let btnFilterYear = document.querySelector("#filterYear");
 
-  btnFilterTitle.addEventListener("click", filterTitle);
-  btnFilterYear.addEventListener("click", filterYear);
+const searchInput = document.querySelector("#search");
+searchInput.addEventListener("input", filterTitleInRealTime);
+function filterTitleInRealTime() {
+  const searchTerm = searchInput.value.toLowerCase(); // Búsqueda insensible a mayúsculas y minúsculas
+  const filteredMovies = movies.filter((movie) => {
+    return movie.title.toLowerCase().includes(searchTerm);
+  });
+  printInfo(filteredMovies);
 }
 
-function filterTitle() {
-  let word = document.querySelector("#search").value;
-  const moviesTitle = [];
-  for (let i = 0; i < movies.length; i++) {
-    if (movies[i].title === word) moviesTitle.push(movies[i]);
-  }
-  printInfo(moviesTitle);
-}
-/* filtra dependiendo de la condicion  */
-function filterYear() {
-  let word = document.querySelector("#search").value;
-  const moviesYear = [];
-  for (let i = 0; i < movies.length; i++) {
-    let year = movies[i].release_date;
-    let dataYear = year.split("-");
-    if (dataYear[0] === word) moviesYear.push(movies[i]);
-  }
-  printInfo(moviesYear);
-}
+const filterYearButton = document.querySelector("#filterYearButton");
+filterYearButton.addEventListener("click", filterYearInRealTime);
 
-function setListenerInput(){
-  let inputText = document.querySelector("#search")
-  inputText.addEventListener("input",(e)=>filterTitle2(e))
-}
-
-function filterTitle2(){
-  console.log(e.target.value);
+function filterYearInRealTime() {
+  const searchTerm = document.querySelector("#search").value;
+  const filteredMovies = movies.filter((movie) => {
+    const releaseYear = movie.release_date.split("-")[0];
+    return releaseYear === searchTerm;
+  });
+  printInfo(filteredMovies);
 }
 
 setListeners()
 makeRequest(pages);
-search();
-/* input busqueda 
-buscar peliculas filtrar:
-titulo 
-año 
-*/

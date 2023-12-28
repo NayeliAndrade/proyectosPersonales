@@ -51,20 +51,10 @@ button {
     background-color: rgb(181, 59, 14);
 }
 
-#filterName {
-    background-color: rgb(14, 181, 64);
-}
-
-#filterYear {
+#filterYearButton {
     background-color: rgb(73, 25, 234);
 }
 
-/* .movieContainer{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0.5rem;
-    justify-content: center;
-} */
 .all {
     width: 200px;
     margin: 1rem;
@@ -75,13 +65,10 @@ button {
     font-weight: bold;
 }
 
-/* main3 */
-
 #movieContainer {
     margin-top: 0.5rem;
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
 }
 
