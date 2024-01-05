@@ -5,10 +5,6 @@ function dataInput() {
   let btnSearch = document.querySelector(".buttonSearch");
   btnSearch.addEventListener("click", () => {
     let wordSearch = document.querySelector("input").value;
-    /* if(wordSearch.trim() === ""){
-        alert('Escribe algo por favor');  
-        return;
-    } */
     if (!validation(wordSearch)) return;
     makeRequest(wordSearch);
     clearInput();
@@ -32,13 +28,12 @@ function makeRequest(wordSearch) {
 }
 
 function clearInput() {
-    document.getElementsByTagName("input")[0].value = " ";
+  document.getElementsByTagName("input")[0].value = " ";
 }
 
 function printInfo(data) {
-    let imagenes = data.hits;
-    /* console.log(imagenes); */
-    imagenes.map((imagen) => {
+  let imagenes = data.hits;
+  imagenes.map((imagen) => {
     const { previewURL, pageURL, type, likes, downloads } = imagen;
 
     let element = document.createElement("div");
@@ -58,19 +53,19 @@ function printInfo(data) {
 }
 
 function clearWindow(container) {
-    while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild);
-    }
+  while (container.hasChildNodes()) {
+    container.removeChild(container.lastChild);
+  }
 }
 
-function textInitial(){
-    let text2 = "Busca tus imagenes favoritas en esta página, consumiras una API de la página PIXABAY"
-    let text = document.createElement("div");
-    text.innerHTML = `
+function textInitial() {
+  let text2 = "Busca tus imagenes favoritas en esta página, consumiras una API de la página PIXABAY"
+  let text = document.createElement("div");
+  text.innerHTML = `
     <p class="textEmpty">${text2}</p>
     `;
-    container.appendChild(text)
+  container.appendChild(text)
 }
-/* inicializacion */
+
 dataInput();
 textInitial();

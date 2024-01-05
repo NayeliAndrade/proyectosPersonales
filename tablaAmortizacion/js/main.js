@@ -2,7 +2,7 @@ import { setListener } from "./setListeners.js";
 setListener()
 
 export function imprimir(e) {
-    e.preventDefault(); 
+    e.preventDefault();
 
     let prestamo = document.querySelector("#prestamo").value;
     const tazaInteres = document.querySelector("#interes").value / 100.0;
@@ -32,20 +32,13 @@ export function imprimir(e) {
 
             prestamo = prestamo - amortizacion
             template.querySelector(".tablaSaldo").textContent = `${prestamo.toFixed(2)}`
-            
+
 
             const clone = template.cloneNode(true)
             fragment.appendChild(clone)
             contenedorTablaAmortizacion.appendChild(fragment)
         }
-    }else{
+    } else {
         alert("Ingresa numeros")
     }
 }
-
-
-
-/* function getFile(){
-    let inputFile = document.querySelector("#file");
-    inputFile.addEventListener("click",(e)=>printWindow(e))
-} */
